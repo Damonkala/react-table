@@ -7,13 +7,16 @@ var GoogleLogo = require("./GoogleLogo.js")
 
 var H1C = React.createClass({
 	render: function(){
-		return React.createElement("div", {className: "green"},
-			"Hello world", React.createElement(GoogleLogo));
+		return (
+			<div className="green">
+				Hullo world
+				<GoogleLogo />
+			</div>
+		)
 	}
 });
 
 
 
 
-// ReactDOM.render(React.createElement(GoogleLogo), document.getElementById('react'))
 ReactDOM.render(React.createElement(H1C), document.getElementById('react'))
