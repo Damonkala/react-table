@@ -1,28 +1,19 @@
-// REACT APP....
-
-// var React = require("react");
-// var ReactDOM = require("react-dom");
 import React from "react"
 import ReactDOM from "react-dom"
-// var GoogleLogo = require("./GoogleLogo.js")
 import GoogleLogo from "./GoogleLogo";
-
-
 import UnorderedList from "./UnorderedList";
 
-var H1C = React.createClass({
-	render: function(){
+class H1C extends React.Component{
+	render(){
 		return (
 			<div className="green">
-				Hullo world
+				Hullo ES6
 				<UnorderedList />
 				<GoogleLogo />
 			</div>
-		)
+		);
 	}
-});
-
-
+};
 
 
 ReactDOM.render(<H1C />, document.getElementById('react'))

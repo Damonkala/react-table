@@ -1,15 +1,15 @@
 import React from "react";
 
-var UnorderedList = React.createClass({
-	render: function(){
+class UnorderedList extends React.Component{
+	render(){
 		return (
 			<ul className="list">
 				<li>Its easy</li>
 				<li>Its involved</li>
-				<li>More fun than regular HTML</li>
+				<li>More fun than regular html</li>
 			</ul>
-		)
+		);
 	}
-});
+}
 
-export default  UnorderedList;
+export default UnorderedList;
