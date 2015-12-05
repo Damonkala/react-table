@@ -10,11 +10,13 @@ class Timer extends React.Component{
 
 	}
 	componentDidMount() {
+	let delta = 1;
 	let intervalId = 	setInterval(() => {
-			if(this.state.remainingSeconds === 1) {
-				clearInterval(intervalId)
+			if(this.state.remainingSeconds === 0 ||
+				this.state.remainingSeconds === this.props.startingSeconds ) {
+				delta = -1 * delta
 			}
-			this.setState({remainingSeconds: this.state.remainingSeconds - 1})
+			this.setState({remainingSeconds: this.state.remainingSeconds + delta})
 		}, 1000)
 	}
 	render(){
@@ -28,7 +30,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<Timer startingSeconds={2} />
+				<Timer startingSeconds={5} />
 				<Timer startingSeconds={99} />
 			</div>
 		)
