@@ -1,4 +1,2 @@
-Little template for Express + React
-
-
-Run npm start
+#table
+Heroku: https://young-mountain-5081.herokuapp.com/
