@@ -1,5 +1,6 @@
 module.exports = {
 	entry: "./public/script.js",
+
 	output: {
 		path:  __dirname + "/public",
 		filename: "bundle.js"
@@ -7,7 +8,9 @@ module.exports = {
 
 	module: {
 		loaders: [
-			{ test: /\.js$/, loader: 'babel-loader'}
+			{ test: /\.js$/, loader: 'babel-loader',
+			query: { presets: ["react", "es2015"] }
+			}
 		]
 	}
 };
